@@ -1,0 +1,41 @@
+﻿@model IEnumerable<ProductsAPIProject.Models.PersonModel>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">FirstName</th>
+            <th scope="col">LastName</th>
+            <th scope="col">Email</th>
+            <th scope="col">ProductsList</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            int count = 1;
+        }
+        @foreach (var person in Model)
+        {
+            <tr>
+
+                <th scope="row">@count</th>
+                <td>@person.FirstName</td>
+                <td>@person.LastName</td>
+                <td>@person.PersonEmail</td>
+                <td>
+                    <ol>
+                      @*   @foreach(var product in person.Products.ProductId)
+                        {
+                            <li>
+                                <strong>@product.ProductName</strong><br />
+                                Description: @product.ProductDescription<br />
+                                Price: @product.ProductPrice
+                            </li>
+                        } *@
+                    </ol>
+                </td>
+            </tr>
+            count++;
+        }
+    </tbody>
+</table>

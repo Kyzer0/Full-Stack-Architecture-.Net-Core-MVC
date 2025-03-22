@@ -1,0 +1,8 @@
+﻿@model ProductsAPIProject.Models.ProductsModel
+
+<h2>Product Details</h2>
+<p><strong>ID:</strong> @Model.ProductId</p>
+<p><strong>Name:</strong> @Model.ProductName</p>
+<p><strong>Price:</strong> @Model.ProductPrice</p>
+
+<a href="@Url.Action("GetAllProducts")">Back to List</a>
